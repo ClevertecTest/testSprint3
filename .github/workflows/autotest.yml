@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Add reviewers
-        uses: ClevertecFrontendLab/create-pr@main
+        uses: ClevertecTest/init-action@main
         with:
           owner: ${{ github.repository_owner }}
           repo: ${{ github.event.repository.name }}
@@ -31,7 +31,7 @@ jobs:
           wait-on: 'http://localhost:3000'
       - name: Check tests
         if: always()
-        uses: ClevertecFrontendLab/check-test@main
+        uses: ClevertecTest/check-tests-action@main
         with:
           owner: ${{ github.repository_owner }}
           repo: ${{ github.event.repository.name }}

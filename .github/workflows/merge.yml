@@ -13,7 +13,7 @@ jobs:
     name: merge to main
     steps:
       - name: Send request on merge
-        uses: ClevertecFrontendLab/merge-pr@main
+        uses: ClevertecTest/merge-action@main
         with:
           owner: ${{ github.repository_owner }}
           repo: ${{ github.event.repository.name }}

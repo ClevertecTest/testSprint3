@@ -13,7 +13,7 @@ jobs:
     name: Add branch protection
     steps:
       - name: Add branch protection
-        uses: ClevertecFrontendLab/branch-protection@main
+        uses: ClevertecTest/branch-protection@main
         with:
           owner: ${{ github.repository_owner }}
           repo: ${{ github.event.repository.name }}
